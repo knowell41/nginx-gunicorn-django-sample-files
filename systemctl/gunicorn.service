@@ -10,3 +10,5 @@ WorkingDirectory=/root/QR_Code_door_access_system/
 ExecStart=/root/env/bin/gunicorn QR_door_acces.wsgi:application --access-logfile /var/log/gunicorn/dev.log
 ExecReload=/bin/kill -s HUP $MAINPID
 ExecStop=/bin/kill -s TERM $MAINPID
+[Install]
+WantedBy=multi-user.target
